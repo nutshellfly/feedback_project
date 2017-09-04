@@ -8,7 +8,7 @@ import reduxThunk from 'redux-thunk'
 import App from './components/App'
 import reducers from './reducers'
 //Initialize a create store with empty start state
-const store = createStore(() => [], {}, applyMiddleware());
+const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
 ReactDOM.render(
 	<Provider store={store}><App /></Provider>, 
